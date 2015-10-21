@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinRegistro;assembly=XamarinRegistro"
+             x:Class="XamarinRegistro.Registro" Title="Ingresa los datos">
+  <StackLayout>
+    <Label Text="Codigo"/>
+    <Entry x:Name="codigo" Placeholder="Ingrese codigo"/>
+    <Label Text="Nombre"/>
+    <Entry x:Name="nombre" Placeholder="Ingrese nombre"/>
+    <Label Text="Direccion"/>
+    <Entry x:Name="direccion" Placeholder="Ingrese direccion"/>
+	<Label Text="Telefono"/>
+    <Entry x:Name="telefono" Placeholder="Ingrese telefono">
+    	<Entry.Behaviors>
+                <local:NumberValidatorBehavior  />
+        </Entry.Behaviors>
+    </Entry>
+	<Label Text="Email"/>
+    <Entry x:Name="email" Placeholder="Ingrese email">
+    	<Entry.Behaviors>
+                <local:EmailValidatorBehavior />
+        </Entry.Behaviors>
+    </Entry>
+	<Label Text="DNI"/>
+    <Entry x:Name="dni" Placeholder="Ingrese dni"/>
+    <Button Text="Agregar" Clicked="adddata"/>  
+</StackLayout>
+</ContentPage>
